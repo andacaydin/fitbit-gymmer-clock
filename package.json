@@ -1,0 +1,12 @@
+{
+  "fitbit": {
+    "appUUID": "9c1cd275-ae2a-4823-a47a-227d09835b9f",
+    "appType": "clockface",
+    "appDisplayName": "GYMMER Clock",
+    "iconFile": "resources/icon.png",
+    "wipeColor": "",
+    "requestedPermissions": [
+      "access_heart_rate"
+    ]
+  }
+}

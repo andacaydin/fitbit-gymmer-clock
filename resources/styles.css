@@ -1,0 +1,29 @@
+.background {
+  viewport-fill: black;
+}
+
+#timeLabel {
+  font-size: 80;
+  font-family: Colfax-Bold;
+  text-length: 32;
+  text-anchor: middle;
+  fill: #EAB412;
+}
+
+.infotext {
+  font-family: Colfax-Bold;
+  font-size: 40;
+  fill: #EAB412;
+  text-length: 32;
+  text-anchor: middle;
+  x: 90%;
+  y: 60;
+}
+
+.subtext {
+  font-family: Colfax-Bold;
+  font-size: 30;
+  fill: #EAB412;
+  text-length: 32;
+  text-anchor: middle;
+}

@@ -1,0 +1,13 @@
+<svg class="background">
+  <image href="gymmer-fitbit-background.png" />
+  <text id="timeLabel" x="50%" y="65%"></text>
+  <text id="weekdayLabel" class="subtext" x="35%" y="85%"></text>
+  <text id="dateLabel" class="infotext" x="50%" y="85%"></text>
+  <text id="monthLabel" class="subtext" x="65%" y="85%"></text>
+  
+  <text id="hrm" class="infotext" x="20%" y="20%">-</text>
+  <text id="hrm_bpm" class="subtext" x="20%" y="30%">bpm</text>
+  
+  <text id="steps" class="infotext" x="80%" y="20%">0</text>
+  <text id="steps_subtitle" class="subtext" x="80%" y="30%">stps</text>
+</svg>
