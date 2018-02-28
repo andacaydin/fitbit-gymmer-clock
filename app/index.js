@@ -3,6 +3,7 @@ import document from "document";
 import { today } from 'user-activity';
 import { HeartRateSensor } from "heart-rate";
 import * as util from "../common/utils";
+import { preferences } from "user-settings";
 
 /**
 1 CLOCK & DATE
@@ -42,7 +43,7 @@ var hrm = new HeartRateSensor();
 hrm.onreading = function() {
   // Peek the current sensor values
   console.log("Current heart rate: " + hrm.heartRate);
-  hrLabel.innerText = hrm.heartRate;
+  hrLabel.text = hrm.heartRate;
 }
 
 // Begin monitoring the sensor
@@ -65,24 +66,27 @@ X UPDATE ON CLOCK TICK
 function updateClock() {
   let todayDate = new Date();
   let hours = todayDate.getHours();
+  if (preferences.clockDisplay === "12h") {
+        hours = (hours + 24) % 12 || 12;
+  }
   let mins = util.zeroPad(todayDate.getMinutes());
   let clockString = `${hours}:${mins}`;
   console.log("time: " + clockString);
-  timeLabel.innerText = clockString;
+  timeLabel.text = clockString;
   
   let monthname = monthNames[todayDate.getMonth()];
   let dayname = days[ todayDate.getDay() ];
-  monthLabel.innerText = monthname
-  dateLabel.innerText = todayDate.getUTCDate();
-  weekdayLabel.innerText = dayname;
+  monthLabel.text = monthname;
+  dateLabel.text = todayDate.getDate();
+  weekdayLabel.text = dayname;
   
   console.log("dayname: " + dayname);
   console.log("monthname: " + monthname);
-  console.log("date: " + todayDate.getUTCDate());
-  
+  console.log("date: " + todayDate.getDate());
+  console.log("today: " + JSON.stringify(today));
   console.log("steps: " + today.adjusted.steps);
   if(today.adjusted.steps != undefined){
-    stepsLabel.innerText = today.adjusted.steps;
+    stepsLabel.text = today.adjusted.steps;
   }
   
 }
