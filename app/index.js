@@ -44,7 +44,7 @@ var hrm = new HeartRateSensor();
 hrm.onreading = function() {
   // Peek the current sensor values
   console.log("Current heart rate: " + hrm.heartRate);
-  hrLabel.text = hrm.heartRate;
+  hrLabel.innerText = hrm.heartRate;
 }
 
 // Begin monitoring the sensor
