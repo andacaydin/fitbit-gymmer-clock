@@ -27,3 +27,8 @@
   text-length: 32;
   text-anchor: middle;
 }
+
+#heartpicture {
+  x: 90%;
+  y: 60;
+}
